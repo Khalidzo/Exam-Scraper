@@ -13,9 +13,9 @@ with open('student_grades.csv', 'w', newline='') as f:
     success_count = 0
     fail_count = 0
     not_rated_count = 0
-    url = 'https://school-name/check?bogennummer='
-    start_id = 0
-    end_id = 1
+    url = 'https://school-name/check?bogennummer=' # changed for the internet
+    start_id = 0 # changed for the internet
+    end_id = 1 # changed for the internet
 
     # loop through the students and poplulate the csv file
     for i in range(start_id, end_id + 1):
