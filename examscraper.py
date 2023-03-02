@@ -36,7 +36,7 @@ with open('student_grades.csv', 'w', newline='') as f:
             continue
         if not rating:
             not_rated_count += 1
-            writer.writerow([name, 'nicht bewertet', 'nicht bewertet', 'nicht bewertet', 'nicht bewertet'])
+            writer.writerow([name, 'X', 'X', 'X', 'nicht bewertet'])
             continue
 
         for i in range(0, len(points)):
@@ -51,7 +51,7 @@ with open('student_grades.csv', 'w', newline='') as f:
         for i in range(len(points) - 3, len(points)):
             gesamt.append(points[i])
 
-        if rating[2] == 'Nicht Bestanden' or rating[2] == 'X':
+        if rating[2] in ['Nicht Bestanden', 'X']:
             fail_count += 1
             writer.writerow([name, gesamt[0], gesamt[1], gesamt[2], 'nicht bestanden'])
 
