@@ -55,7 +55,7 @@ with open('student_grades.csv', 'w', newline='') as f:
             fail_count += 1
             writer.writerow([name, gesamt[0], gesamt[1], gesamt[2], 'nicht bestanden'])
 
-        elif rating[2] == 'Sehr Gut' or rating[2] == 'Gut' or rating[2] == 'Befriedigend' or rating[2] == 'Ausreichend' or rating[2] == 'Bestanden':
+        elif rating[2] in ['Sehr Gut', 'Gut', 'Befriedigend', 'Ausreichend','Bestanden']:
             success_count += 1
             writer.writerow([name, gesamt[0], gesamt[1], gesamt[2], 'bestanden'])
             
